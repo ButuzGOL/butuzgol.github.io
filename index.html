@@ -1,13 +1,49 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Pamparam
 ---
 
-<div id="home">
+<div id="sidebar1" class="sidebar left col220 clearfix" role="complementary">        
+  <div id="tag_cloud-3" class="widget widget_tag_cloud">
+    <h4 class="widgettitle">Tags Cloud</h4>
+    <div class="tagcloud">
+      {% for tag in site.tags %}
+        <a style="font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size | plus: 70 }}%" href="/{{ tag | first | slugize }}/">
+            {{ tag | first }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <div id="categories-3" class="widget widget_categories">
+    <h4 class="widgettitle">Categories</h4>
+    {% if site.categories %}
+      <ul>
+        {% for category in site.categories %}
+          <li class="cat-item">
+            <a href="/{{ category | first | slugize }}/">
+              {{ category | first }}
+            </a> ({{ category | last | size }})
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+  <div id="text-3" class="widget widget_text">
+    <div class="textwidget">
+      <div class="widget_twitter_original" data-twttr-id="twttr-sandbox-0">
+        <a class="twitter-timeline" href="https://twitter.com/ButuzGOL" data-widget-id="371004015904948225">Tweets by @ButuzGOL</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div id="home">
   <h1>Blog Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-</div>
+</div> -->
