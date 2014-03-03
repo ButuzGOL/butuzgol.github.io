@@ -1,3 +1,4 @@
 name: Pamparam
 markdown: redcarpet
 pygments: true
+paginate: 10
