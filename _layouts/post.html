@@ -1,9 +1,17 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
-
-<div class="post">
-{{ content }}
+<div id="sidebar1" class="sidebar left col220 clearfix" role="complementary">        
+  {% include widget_tags.html %}
+  {% include widget_categories.html %}
+  
+</div>
+<div id="main" class="col700 right clearfix" role="main">
+  <div class="line"></div>
+  <section id="posts">
+    <div class="top"></div>
+    <div class="middle">
+    </div>
+    <div class="bottom"></div>
+  </section> 
 </div>

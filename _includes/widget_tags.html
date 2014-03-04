@@ -1,0 +1,10 @@
+<div id="tag_cloud-3" class="widget widget_tag_cloud">
+  <h4 class="widgettitle">Tags Cloud</h4>
+  <div class="tagcloud">
+    {% for tag in site.tags %}
+      <a style="font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size | plus: 70 }}%" href="/{{ tag | first | slugize }}/">
+          {{ tag | first }}
+      </a>
+    {% endfor %}
+  </div>
+</div>

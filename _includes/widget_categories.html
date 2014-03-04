@@ -1,0 +1,14 @@
+<div id="categories-3" class="widget widget_categories">
+  <h4 class="widgettitle">Categories</h4>
+  {% if site.categories %}
+    <ul>
+      {% for category in site.categories %}
+        <li class="cat-item">
+          <a href="{{ category | first | slugize }}/">
+            {{ category | first }}
+          </a> ({{ category | last | size }})
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>

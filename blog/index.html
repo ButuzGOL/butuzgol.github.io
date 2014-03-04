@@ -1,0 +1,45 @@
+---
+layout: default
+title: Blog - Pamparam
+---
+
+<div id="sidebar1" class="sidebar left col220 clearfix" role="complementary">        
+  {% include widget_tags.html %}
+  {% include widget_categories.html %}
+
+</div>
+<div id="main" class="col700 right clearfix" role="main">
+  <section id="posts">
+    <div class="top"></div>
+    <div class="middle">
+      {% for post in paginator.posts %}
+        {% include post.html param="post" %}
+      {% endfor %}
+
+      {% if paginator.total_pages > 1 %}
+        <nav class="page-navigation">
+          <ol class="pamparam_page_navi clearfix">
+            {% if paginator.previous_page %}
+              <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
+            {% endif %}
+
+            {% for page in (1..paginator.total_pages) %}
+              {% if page == paginator.page %}
+                <li class="bpn-current">{{ page }}</li>
+              {% elsif page == 1 %}
+                <li><a href="{{ '/blog' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+              {% else %}
+                <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+              {% endif %}
+            {% endfor %}
+
+            {% if paginator.next_page %}
+              <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a></li>
+            {% endif %}
+          </ol>
+        </nav>
+      {% endif %}
+    </div>
+    <div class="bottom"></div>
+  </section> 
+</div>
