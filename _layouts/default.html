@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} {% if page.title %}-{% endif %} {{ site.name }}</title>
+    <meta name="description" content="ButuzGOL website">
+    <meta name="author" content="ButuzGOL">
     <meta name="viewport" content="width=device-width">
 
     <link rel="shortcut icon" href="/assets/images/favicon.ico">
@@ -42,14 +44,14 @@
                   <li id="menu-item-129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home {% if page.url == '/index.html' %} current_page_item current-menu-item {% endif %}">
                     <a href="/">Home</a>
                   </li>
-                  <li id="menu-item-126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126 {% if page.url == '/blog.html' %} current_page_item current-menu-item {% endif %}">
-                    <a href="blog.html">Blog</a>
+                  <li id="menu-item-126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126 {% if page.url == '/blog/index.html' %} current_page_item current-menu-item {% endif %}">
+                    <a href="/blog">Blog</a>
                   </li>
                   <li id="menu-item-125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-125">
                     <a href="portfolio/">Portfolio</a>
                   </li>
                   <li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-2 {% if page.url == '/about.html' %} current_page_item current-menu-item {% endif %} menu-item-127">
-                    <a href="about.html">About</a>
+                    <a href="/about.html">About</a>
                   </li>
                 </ul>
               </div>         

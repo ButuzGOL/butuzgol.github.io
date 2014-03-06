@@ -4,13 +4,53 @@ layout: default
 <div id="sidebar1" class="sidebar left col220 clearfix" role="complementary">        
   {% include widget_tags.html %}
   {% include widget_categories.html %}
-  
+
 </div>
 <div id="main" class="col700 right clearfix" role="main">
-  <div class="line"></div>
   <section id="posts">
     <div class="top"></div>
     <div class="middle">
+      <article class="post type-post status-publish format-standard hentry category-tutorial tag-git clearfix">
+        <header>
+          <h1 class="h2">
+            <a href="{{ page.url }}" rel="bookmark" title="{{ page.title }}">
+              {{ page.title }}
+            </a>
+          </h1>
+          <p class="meta">
+            Posted
+            <time datetime="{{ page.date }}" pubdate="">{{ page.date | date_to_string }}</time>
+            {% if page.categories %}
+              <span class="amp">&amp;</span>
+              filed under 
+              {% for category in page.categories %}
+                <a href="{{ category | first | slugize }}/" rel="category tag">{{ category }}</a>
+                {% if forloop.last == false %}
+                ,
+                {% endif %}
+              {% endfor %}
+              .
+            {% endif %}
+          </p>
+          {% include sharing.html %}
+        </header>
+        <section class="post_content clearfix">
+          {{ content }}
+        </section>
+        <footer>
+          {% if page.tags %}
+            <p class="tags">
+              <span class="tags-title">Tags:</span>
+              {% for tag in page.tags %}
+                <a href="{{ tag | first | slugize }}/" rel="tag">{{ tag }}</a>
+              {% endfor %}
+            </p>
+          {% endif %}
+        </footer>
+      </article>
+      {% if site.comments %}
+        {% include comments.html %}
+      {% endif %}
     </div>
     <div class="bottom"></div>
   </section> 

@@ -509,12 +509,10 @@ POSTS & CONTENT STYLES
                                             -moz-box-shadow:0px 0px 5px #D2CBCB; -webkit-box-shadow:0px 0px 5px #D2CBCB; box-shadow:0px 0px 5px #D2CBCB; }
         article.post footer .tags a:hover { background-color: #CC8585; }
 
-        .social-widget { margin: -10px 0 10px 0; }
-        .social-widget > div { float: left; }
-        .social-widget .facebook-like { width: 80px; height: 20px; }
-        .social-widget .twitter-tweet { width: 103px; }
-        .social-widget .google-plus { width: 59px; }
-        .social-widget .social-clear { clear: both; float: none; }
+        .social-widget { margin: -10px 0 20px 0; }
+        .social-widget .fb-like { margin: 0 10px 0 0; float: left; }
+        .social-widget .twitter-share { display: inline-block; }
+        .social-widget .google_plus { display: inline-block; margin-left: -20px; }
         
         #posts .next { 
             background-color: #FCFCFC;

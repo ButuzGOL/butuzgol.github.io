@@ -1,0 +1,55 @@
+{% capture full_url %}http://{{ site.host }}{{ page.url }}{% endcapture %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=644334695581579";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript">
+  (function(){
+   var twitterWidgets = document.createElement('script');
+   twitterWidgets.type = 'text/javascript';
+   twitterWidgets.async = true;
+   twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+   document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+   })();
+</script>
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script');
+    po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<div class="social-widget">
+  <div class="fb-like"
+    data-href="{{full_url}}"
+    data-send="true"
+    data-layout="button_count"
+    data-width="90"
+    data-show-faces="false">
+  </div>
+
+  <div class="twitter-share">
+    <a href="https://twitter.com/share"
+      class="twitter-share-button"
+      data-url="{{full_url}}"
+      data-lang="en">
+    </a>
+  </div>
+
+  <div class="google_plus">
+    <div class="g-plusone"
+      data-href="{{full_url}}"
+      data-size="medium"
+      data-annotation="bubble">
+    </div>
+  </div>
+</div>

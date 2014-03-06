@@ -4,7 +4,7 @@
     <ul>
       {% for category in site.categories %}
         <li class="cat-item">
-          <a href="{{ category | first | slugize }}/">
+          <a href="/{{ category | first | slugize }}/">
             {{ category | first }}
           </a> ({{ category | last | size }})
         </li>
