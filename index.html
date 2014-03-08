@@ -1,7 +1,11 @@
 ---
 layout: default
 ---
-
+<!--
+1. Categories
+2. Tags
+3. Portfolio
+-->
 <div id="sidebar1" class="sidebar left col220 clearfix" role="complementary">        
   {% include widget_tags.html %}
   {% include widget_categories.html %}
@@ -21,7 +25,6 @@ layout: default
     </div>
     <div class="top"></div>
     <div class="middle">
-      {{site.posts.paginator.per_page}}
       {% for post in site.posts limit:10 %}
         {% include post.html param="post" %}
       {% endfor %}
