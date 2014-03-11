@@ -2,9 +2,12 @@
 layout: default
 ---
 <!--
-1. Categories
-2. Tags
-3. Portfolio
+1. Portfolio index
+2. Portfolio list
+3. Portfolio inside
+4. Portfolio tech
+2. Tag cloud
+3. Short Full post content
 -->
 <div id="sidebar1" class="sidebar left col220 clearfix" role="complementary">        
   {% include widget_tags.html %}
@@ -17,6 +20,7 @@ layout: default
     <div class="title">
       Latest Projects <a class="more" href="/portfolio">see all</a>
     </div>
+    {{ site.projects }}
   </section>
   <div class="line"></div>
   <section id="posts">
@@ -25,10 +29,10 @@ layout: default
     </div>
     <div class="top"></div>
     <div class="middle">
-      {% for post in site.posts limit:10 %}
+      {% for post in site.categories.blog limit:10 %}
         {% include post.html param="post" %}
       {% endfor %}
-      {% if site.posts.size > 10 %}
+      {% if site.categories.blog.size > 10 %}
         <a class="next" href="/blog/page/2">see more</a>
       {% endif %}
     </div>

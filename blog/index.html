@@ -12,6 +12,7 @@ title: Blog - Pamparam
   <section id="posts">
     <div class="top"></div>
     <div class="middle">
+    {{ page.pager.total_posts }}
       {% for post in paginator.posts %}
         {% include post.html param="post" %}
       {% endfor %}
