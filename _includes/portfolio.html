@@ -1,0 +1,54 @@
+<article class="post portfolio type-portfolio status-publish hentry clearfix">
+  <div class="left">
+    <header>
+      <h1 class="h2">
+        <a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a>
+        {% if post.website %}
+          <a href="{{ post.website }}">Go to project website →</a>
+        {% endif %}
+      </h1>
+      <p class="meta">Posted <time datetime="{{ post.date }}" pubdate="">{{ post.date | date_to_string }}</time></p>
+    </header>
+    <section class="post_content clearfix">
+      {{ post.content }}
+    </section>
+    <footer>
+      {% if post.code %}
+        <p class="repo">
+          Code: <a href="{{ post.code }}" target="_blank">{{ post.code }}</a>
+        </p>
+      {% endif %}
+      {% if post.technologies %}
+        <p class="technologies">   
+          <span class="tags-title">Technologies:</span> 
+          {% for technology in post.technologies %}                           
+            <img height="45" src="/assets/images/technologies/{{ technology | downcase }}.png" class="attachment-public" alt="" title="{{ technology }}" />
+          {% endfor %}
+        </p>
+      {% endif %}
+      {% if post.categories %}
+        <p class="tags">
+          <span class="tags-title">Categories:</span>
+          {% for category in post.categories %}
+            {% unless forloop.first %}
+              <span>{{ category }}</span>
+            {% endunless %}
+          {% endfor %}
+        </p>
+      {% endif %}
+      {% if post.employer %}
+        <div class="employer">
+          Project made by <a href="{{ post.employer.url }}" target="_blank">{{ post.employer.label }}</a>
+          {% if post.employer.projectUrl %}
+            <a href="{{ post.employer.projectUrl }}" target="_blank">See more</a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </footer>
+  </div>
+  <div class="right">
+    <div class="thumb">
+      <img width="420" src="/uploads/portfolio/{{ post.images.featured }}" class="attachment-portfolio-thumb-420 wp-post-image" alt="" title="{{ post.title }}">
+    </div>
+  </div>
+</article>

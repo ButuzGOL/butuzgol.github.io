@@ -501,10 +501,10 @@ POSTS & CONTENT STYLES
 		article.post footer { margin: 0 0 30px 0; padding-bottom: 0; }
         
         article.post footer .technologies { color: #777777; font-size: 12px; font-style: italic; margin-bottom: 15px; }
-        article.post footer .technologies a { margin-left: 10px; }
+        article.post footer .technologies img { margin-left: 10px; }
         article.post footer .repo { color: #777777; font-size: 12px; font-style: italic; margin-bottom: 15px; }
         article.post footer .tags { color: #777777; font-size: 12px; font-style: italic; margin-bottom: 15px; }
-        article.post footer .tags a { font-family: 'Aclonica', cursive; text-decoration: none; background-color: #666666; padding: 5px; color: #fff; line-height: 30px;
+        article.post footer .tags span:not(.tags-title), article.post footer .tags a { font-family: 'Aclonica', cursive; text-decoration: none; background-color: #666666; padding: 5px; color: #fff; line-height: 30px;
                                             -moz-border-radius:9px; -webkit-border-radius:9px; border-radius:9px; font-style: normal;
                                             -moz-box-shadow:0px 0px 5px #D2CBCB; -webkit-box-shadow:0px 0px 5px #D2CBCB; box-shadow:0px 0px 5px #D2CBCB; }
         article.post footer .tags a:hover { background-color: #CC8585; }

@@ -8,14 +8,18 @@
     <p class="meta">
       Posted
       <time datetime="{{ post.date }}" pubdate="">{{ post.date | date_to_string }}</time>
-      {% if post.categories %}
+      {% if post.categories.length > 1 %}
         <span class="amp">&amp;</span>
         filed under 
         {% for category in post.categories %}
-          <a href="/category/{{ category }}" rel="category tag">{{ category }}</a>
-          {% if forloop.last == false %}
-          ,
-          {% endif %}
+          {% unless category == 'blog' %}
+            {% if forloop.first == false %}
+              {% unless post.categories[0] == 'blog' and forloop.index == 2 %}
+              ,
+              {% endunless %}
+            {% endif %}
+            <a href="/category/{{ category }}" rel="category tag">{{ category }}</a>
+          {% endunless %}
         {% endfor %}
         .
       {% endif %}

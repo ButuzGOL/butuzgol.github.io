@@ -3,11 +3,13 @@
   {% if site.categories %}
     <ul>
       {% for category in site.categories %}
-        <li class="cat-item">
-          <a href="/category/{{ category[0] }}">
-            {{ category[0] }}
-          </a> ({{ category | last | size }})
-        </li>
+        {% unless category[0] == 'blog' or category[0] == 'portfolio' %}
+          <li class="cat-item">
+            <a href="/category/{{ category[0] }}">
+              {{ category[0] }}
+            </a> ({{ category | last | size }})
+          </li>
+        {% endunless %}
       {% endfor %}
     </ul>
   {% endif %}

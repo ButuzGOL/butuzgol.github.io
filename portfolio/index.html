@@ -1,0 +1,16 @@
+---
+layout: default
+title: Portfolio - Pamparam
+---
+
+<div id="main" class="clearfix col980" role="main">
+  <section id="posts" class="portfolio">
+    <div class="top"></div>
+    <div class="middle">
+      {% for post in site.categories.portfolio %}
+        {% include portfolio.html param="post" %}
+      {% endfor %}
+    </div>
+    <div class="bottom"></div>
+  </section> 
+</div>
