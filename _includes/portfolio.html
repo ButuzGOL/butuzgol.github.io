@@ -26,7 +26,7 @@
           {% endfor %}
         </p>
       {% endif %}
-      {% if post.categories %}
+      {% if post.categories.size > 1 %}
         <p class="tags">
           <span class="tags-title">Categories:</span>
           {% for category in post.categories %}

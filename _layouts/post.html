@@ -20,17 +20,15 @@ layout: default
           <p class="meta">
             Posted
             <time datetime="{{ page.date }}" pubdate="">{{ page.date | date_to_string }}</time>
-            {% if post.categories.length > 1 %}
+            {% if page.categories.size > 1 %}
               <span class="amp">&amp;</span>
               filed under
               {% for category in page.categories %}
-                {% unless category == 'blog' %}
-                  {% if forloop.first == false %}
-                    {% unless page.categories[0] == 'blog' and forloop.index == 2 %}
-                    ,
-                    {% endunless %}
-                  {% endif %}
+                {% unless forloop.first %}
                   <a href="/category/{{ category }}" rel="category tag">{{ category }}</a>
+                  {% unless forloop.last %}
+                    ,
+                  {% endunless %}
                 {% endunless %}
               {% endfor %}
               .

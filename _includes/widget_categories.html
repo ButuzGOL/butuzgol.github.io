@@ -3,6 +3,7 @@
   {% if site.categories %}
     <ul>
       {% for category in site.categories %}
+        {{ category.posts }}
         {% unless category[0] == 'blog' or category[0] == 'portfolio' %}
           <li class="cat-item">
             <a href="/category/{{ category[0] }}">

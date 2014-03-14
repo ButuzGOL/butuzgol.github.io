@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<div id="main" class="clearfix col980" role="main">
+  <section id="posts" class="portfolio">
+    <div class="top"></div>
+    <div class="middle">
+      <article class="post portfolio type-portfolio status-publish hentry clearfix">
+        <div class="left">
+          <header>
+            <h1 class="h2">
+              <a href="{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a>
+              {% if page.website %}
+                <a href="{{ page.website }}">Go to project website →</a>
+              {% endif %}
+            </h1>
+            <p class="meta">Posted <time datetime="{{ page.date }}" pubdate="">{{ page.date | date_to_string }}</time></p>
+          </header>
+          <section class="post_content clearfix">
+            {{ content }}
+          </section>
+          <footer>
+            {% if page.code %}
+              <p class="repo">
+                Code: <a href="{{ page.code }}" target="_blank">{{ page.code }}</a>
+              </p>
+            {% endif %}
+            {% if page.technologies %}
+              <p class="technologies">   
+                <span class="tags-title">Technologies:</span> 
+                {% for technology in page.technologies %}                           
+                  <img height="45" src="/assets/images/technologies/{{ technology | downcase }}.png" class="attachment-public" alt="" title="{{ technology }}" />
+                {% endfor %}
+              </p>
+            {% endif %}
+            {% if page.categories.size > 1 %}
+              <p class="tags">
+                <span class="tags-title">Categories:</span>
+                {% for category in page.categories %}
+                  {% unless forloop.first %}
+                    <span>{{ category }}</span>
+                  {% endunless %}
+                {% endfor %}
+              </p>
+            {% endif %}
+            {% if page.employer %}
+              <div class="employer">
+                Project made by <a href="{{ page.employer.url }}" target="_blank">{{ page.employer.label }}</a>
+                {% if page.employer.projectUrl %}
+                  <a href="{{ page.employer.projectUrl }}" target="_blank">See more</a>
+                {% endif %}
+              </div>
+            {% endif %}
+          </footer>
+        </div>
+        <div class="right">
+          <div class="thumb">
+            <img width="420" src="/uploads/portfolio/{{ page.images.featured }}" class="attachment-portfolio-thumb-420 wp-post-image" alt="" title="{{ page.title }}">
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        {% if page.images.other %}
+          <div class="attachments">
+            {% for image in page.images.other %}
+              <img width="880" src="/uploads/portfolio/{{ image }}" class="attachment-portfolio-attachment-880" alt="" title="" />                       
+            {% endfor %}
+          </div>
+        {% endif %}
+      </article>
+    </div>
+    <div class="bottom"></div>
+  </section> 
+</div>
