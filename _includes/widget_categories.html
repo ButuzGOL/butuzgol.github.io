@@ -7,7 +7,7 @@
         {% unless category[0] == 'blog' or category[0] == 'portfolio' %}
           <li class="cat-item">
             <a href="/category/{{ category[0] }}">
-              {{ category[0] }}
+              {{ category | first | capitalize }}
             </a> ({{ category | last | size }})
           </li>
         {% endunless %}

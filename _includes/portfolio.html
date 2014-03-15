@@ -10,7 +10,7 @@
       <p class="meta">Posted <time datetime="{{ post.date }}" pubdate="">{{ post.date | date_to_string }}</time></p>
     </header>
     <section class="post_content clearfix">
-      {{ post.content }}
+      {{ post.content | more: "excerpt" }}
     </section>
     <footer>
       {% if post.code %}
@@ -26,13 +26,10 @@
           {% endfor %}
         </p>
       {% endif %}
-      {% if post.categories.size > 1 %}
+      {% if post.cats.size > 1 %}
         <p class="tags">
-          <span class="tags-title">Categories:</span>
-          {% for category in post.categories %}
-            {% unless forloop.first %}
-              <span>{{ category }}</span>
-            {% endunless %}
+          {% for cat in post.cats %}
+            <span>{{ cat }}</span>
           {% endfor %}
         </p>
       {% endif %}

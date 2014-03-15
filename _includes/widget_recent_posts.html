@@ -1,0 +1,11 @@
+<div id="linkcat-2" class="widget widget_recent_entries"><h4 class="widgettitle">Recent Posts</h4>
+  {% if site.posts %}
+    <ul>
+      {% for post in site.posts limit:5 %}
+        <li>
+          <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>

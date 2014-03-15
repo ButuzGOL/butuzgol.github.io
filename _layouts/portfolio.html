@@ -34,13 +34,10 @@ layout: default
                 {% endfor %}
               </p>
             {% endif %}
-            {% if page.categories.size > 1 %}
+            {% if page.cats.size > 1 %}
               <p class="tags">
-                <span class="tags-title">Categories:</span>
-                {% for category in page.categories %}
-                  {% unless forloop.first %}
-                    <span>{{ category }}</span>
-                  {% endunless %}
+                {% for cat in page.cats %}
+                  <span>{{ cat }}</span>
                 {% endfor %}
               </p>
             {% endif %}

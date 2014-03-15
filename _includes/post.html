@@ -24,7 +24,7 @@
     </p>
   </header>
   <section class="post_content clearfix">
-    {{ post.content }}
+    {{ post.content | more: "excerpt" }}
   </section>
   <footer>
     {% if post.tags %}
