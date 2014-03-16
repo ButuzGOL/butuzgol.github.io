@@ -481,8 +481,9 @@ POSTS & CONTENT STYLES
         border: 2px solid #cecece;
       }
       
-      .post_content a.more-link { font-size: 16px; font-style: italic; }
-      .post_content a.more-link:hover {  }
+      .post_content .more-link { margin-top: 10px; }
+      .post_content .more-link a { font-size: 16px; font-style: italic; }
+      .post_content .more-link a:hover {  }
       
       .wp-caption {}
       .wp-caption img {}

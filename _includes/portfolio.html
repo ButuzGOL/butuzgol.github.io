@@ -4,7 +4,7 @@
       <h1 class="h2">
         <a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a>
         {% if post.website %}
-          <a href="{{ post.website }}">Go to project website →</a>
+          <a href="{{ post.website }}">Go to project →</a>
         {% endif %}
       </h1>
       <p class="meta">Posted <time datetime="{{ post.date }}" pubdate="">{{ post.date | date_to_string }}</time></p>
@@ -26,10 +26,10 @@
           {% endfor %}
         </p>
       {% endif %}
-      {% if post.cats.size > 1 %}
+      {% if post.types.size > 1 %}
         <p class="tags">
-          {% for cat in post.cats %}
-            <span>{{ cat }}</span>
+          {% for type in post.types %}
+            <span>{{ type }}</span>
           {% endfor %}
         </p>
       {% endif %}
@@ -45,7 +45,7 @@
   </div>
   <div class="right">
     <div class="thumb">
-      <img width="420" src="/uploads/portfolio/{{ post.images.featured }}" class="attachment-portfolio-thumb-420 wp-post-image" alt="" title="{{ post.title }}">
+      <img width="420" src="/uploads/posts/portfolio/{{ post.images.featured }}" class="attachment-portfolio-thumb-420 wp-post-image" alt="" title="{{ post.title }}">
     </div>
   </div>
 </article>

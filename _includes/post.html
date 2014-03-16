@@ -7,7 +7,7 @@
     </h1>
     <p class="meta">
       Posted
-      
+      <time datetime="{{ post.date }}" pubdate="">{{ post.date | date_to_string }}</time>
       {% if post.categories.size > 1 %}
         <span class="amp">&amp;</span>
         filed under 
@@ -24,7 +24,15 @@
     </p>
   </header>
   <section class="post_content clearfix">
-    {{ post.content | more: "excerpt" }}
+    {% capture content %}{{ post.content | more: "excerpt" }}{% endcapture %}
+    {{ content }}
+    {% if content != post.content %}
+      <div class="more-link">
+        <a href="{{ post.url }}">
+          <span class="read-more">Continue reading →</span>
+        </a>
+      </div>
+    {% endif %}
   </section>
   <footer>
     {% if post.tags %}

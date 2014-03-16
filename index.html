@@ -4,6 +4,12 @@ layout: default
 <!--
 1. Tag cloud
 2. Social
+3. post url
+4. portfolio data
+5. private portfolio
+6. blog menu page selected
+7. blog page selected
+8. change log text
 -->
 <div id="sidebar1" class="sidebar left col220 clearfix" role="complementary">        
   {% include widget_tags.html %}
@@ -24,7 +30,7 @@ layout: default
               <a href="{{ post.url }}">
                 <div class="alltogether">
                   <div class="thumb">
-                    <img width="420" src="/uploads/portfolio/{{ post.images.featured }}" class="attachment-portfolio-thumb-420 wp-post-image" alt="" title="" />
+                    <img width="420" src="/uploads/posts/portfolio/{{ post.images.featured }}" class="attachment-portfolio-thumb-420 wp-post-image" alt="" title="" />
                   </div>
                   <div class="title">{{ post.title }}</div>
                 </div>

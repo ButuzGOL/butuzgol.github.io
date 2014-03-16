@@ -1,6 +1,6 @@
 name: Pamparam
 markdown: redcarpet
 pygments: true
-paginate: 1
+paginate: 10
 paginate_path: blog/page/:num
 comments: true
