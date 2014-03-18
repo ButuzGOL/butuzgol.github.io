@@ -46,6 +46,7 @@ module Jekyll
             newpage = Page.new(site, site.source, page.dir, page.name)
             newpage.pager = pager
             newpage.dir = Pager.paginate_path(site, num_page, page)
+            newpage.data['title'] += ' - Page ' + num_page.to_s  
             site.pages << newpage
           else
             page.pager = pager

@@ -10,7 +10,7 @@
 
     <link rel="shortcut icon" href="/assets/images/favicon.ico">
     
-    <link href="http://fonts.googleapis.com/css?family=Aclonica|Hammersmith+One|Istok+Web|Love+Ya+Like+A+Sister|Open+Sans|Terminal+Dosis" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Aclonica|Hammersmith+One|Istok+Web|Love+Ya+Like+A+Sister|Open+Sans|Holtwood+One+SC" rel="stylesheet" type="text/css">
     
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/main.css">
@@ -26,15 +26,17 @@
             <div id="logo-image">
               <a href="/" rel="nofollow">Pamparam</a>
             </div>
-            <p id="logo" class="h1">
-              <a href="/" rel="nofollow">Pamparam</a>
-            </p>
+            <a id="logo" class="h1" href="/">
+              PAMPARAM
+            </a>
             <section id="social">
-              <a id="github" href="https://github.com/ButuzGOL"></a>
-              <a id="instagram" href="http://www.instagram.com/ButuzGOL"></a>
               <a id="linkedin" href="http://www.linkedin.com/in/ButuzGOL"></a>
+              <a id="github" href="https://github.com/ButuzGOL"></a>
+              <a id="stackoverflow" href="http://stackoverflow.com/users/1309841/butuzgol"></a>
               <a id="facebook" href="http://www.facebook.com/profile.php?id=1451332451"></a>
               <a id="twitter" href="https://twitter.com/ButuzGOL"></a>
+              <a id="goodreads" href="https://www.goodreads.com/ButuzGOL"></a>
+              <a id="instagram" href="http://www.instagram.com/ButuzGOL"></a>
             </section>
  
             <nav role="navigation">
@@ -43,7 +45,7 @@
                   <li id="menu-item-129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home {% if page.url == '/index.html' %} current_page_item current-menu-item {% endif %}">
                     <a href="/">Home</a>
                   </li>
-                  <li id="menu-item-126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126 {% if page.url == '/blog/index.html' %} current_page_item current-menu-item {% endif %}">
+                  <li id="menu-item-126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126 {% if page.url == '/blog/index.html' or page.url contains '/blog/page/' %} current_page_item current-menu-item {% endif %}">
                     <a href="/blog">Blog</a>
                   </li>
                   <li id="menu-item-125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-125 {% if page.url == '/portfolio/index.html' %} current_page_item current-menu-item {% endif %}">
@@ -83,11 +85,13 @@
             <div id="by">Copyright {{ site.time | date: '%Y' }} by ButuzGOL</div>
             <div id="reserved">All Rights Reserved.</div>
             <section id="social-mini" class="clearfix">
-              <a id="github-mini" href="https://github.com/ButuzGOL"></a>
-              <a id="instagram-mini" href="http://www.instagram.com/ButuzGOL"></a>
               <a id="linkedin-mini" href="http://www.linkedin.com/in/ButuzGOL"></a>
+              <a id="github-mini" href="https://github.com/ButuzGOL"></a>
+              <a id="stackoverflow-mini" href="http://stackoverflow.com/users/1309841/butuzgol"></a>
               <a id="facebook-mini" href="http://www.facebook.com/profile.php?id=1451332451"></a>
               <a id="twitter-mini" href="https://twitter.com/ButuzGOL"></a>
+              <a id="goodreads-mini" href="https://www.goodreads.com/ButuzGOL"></a>
+              <a id="instagram-mini" href="http://www.instagram.com/ButuzGOL"></a>
             </section>
             <a id="to_up" href=""></a>
           </div>

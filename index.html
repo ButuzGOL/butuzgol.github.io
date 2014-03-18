@@ -2,14 +2,7 @@
 layout: default
 ---
 <!--
-1. Tag cloud
-2. Social
-3. post url
-4. portfolio data
-5. private portfolio
-6. blog menu page selected
-7. blog page selected
-8. change log text
+1. review
 -->
 <div id="sidebar1" class="sidebar left col220 clearfix" role="complementary">        
   {% include widget_tags.html %}
@@ -26,16 +19,18 @@ layout: default
       <div class="content clearfix">
         <ul id="slider">
           {% for post in site.categories.portfolio limit:10 %}
-            <li>
-              <a href="{{ post.url }}">
-                <div class="alltogether">
-                  <div class="thumb">
-                    <img width="420" src="/uploads/posts/portfolio/{{ post.images.featured }}" class="attachment-portfolio-thumb-420 wp-post-image" alt="" title="" />
+            {% unless post.private == true %}
+              <li>
+                <a href="{{ post.url }}">
+                  <div class="alltogether">
+                    <div class="thumb">
+                      <img width="420" src="/uploads/posts/portfolio/{{ post.images.featured }}" class="attachment-portfolio-thumb-420 wp-post-image" alt="" title="" />
+                    </div>
+                    <div class="title">{{ post.title }}</div>
                   </div>
-                  <div class="title">{{ post.title }}</div>
-                </div>
-              </a>
-            </li>
+                </a>
+              </li>
+            {% endunless %}
           {% endfor %}
         </ul>
       </div>

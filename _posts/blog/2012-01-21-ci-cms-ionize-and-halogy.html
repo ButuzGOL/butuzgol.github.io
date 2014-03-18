@@ -1,0 +1,16 @@
+---
+layout: post
+title: CI CMS Ionize and Halogy
+categories:
+- blog
+- CMS
+tags:
+- CodeIgniter
+---
+Long time ago I used CI framework for a site. Now I have to write site on my work so I decided to use CI as a framework. But I didn't start writing only watching documentation, I decided to watch inside cms that were writing on this framework (I found about ten), so I choose <a href="http://www.ionizecms.com/">Ionize</a> and <a href="http://www.halogy.com/">Halogy</a>.<br /><br />
+
+<img class="size-full wp-image-547 aligncenter noborder" title="logo" src="/uploads/posts/blog/ionize.png" alt="" width="208" height="90" />First I choose Ionize because it has good interface and installation was very easy but when I started looking inside the code I saw a big mass. Admin part interface realize with using <a href="http://mootools.net/">Mootools</a> as a js framework and <a href="http://mochaui.org/demo/">MochaUI</a> as a user-interface. So all admin part made by ajax request so I didn't like it because ajax request don't do one big js engine. It happens this way you press link -&gt; js calls ajax request -&gt; it receive big part html with js and change some html that exists with received data. So I stop go forward. Thanks Ionize with it help I watch many information about <a href="http://mootools.net/">Mootools</a> and really like plugins.<br /><br />
+
+<img class="size-full wp-image-550 aligncenter" title="halogy" src="/uploads/posts/blog/halogy.gif" alt="" width="192" height="128" />So after disappointed about Ionize cms I start looking into the code of Halogy cms. It has HMVC patter that I never met (like MVC but groups in folders as modules). So from the beggining it was easy and clear to understand. Code clear and has many comments so I like it. If you want learn CI framework you should look inside this cms.<br /><br />
+
+P.S. I think CI is best framework for small websites or for programmers that like writing websites on clear php. For big project I think CI doesn't suitable. CI also gives freedom in writing code, its very easy for beginner, have good documentation, but it has very small functionality versus frameworks like Yii CakePHP...

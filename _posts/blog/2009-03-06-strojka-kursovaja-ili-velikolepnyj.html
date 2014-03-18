@@ -1,0 +1,63 @@
+---
+layout: post
+title: Course on Python + Gtk
+categories:
+- blog
+- My projects
+tags:
+- MySQL
+- PyGTK
+- Python
+---
+<img class="size-full wp-image-178 noborder aligncenter" title="stroika" src="/uploads/posts/blog/stroika/logo.png" alt="" width="128" height="128" />
+<span style="font-weight: bold;">Пред история</span>: Вот как-то дали нам курсач (кстати тема '<span style="font-weight: bold;">Строительная организация</span>'), а для меня это очередной повод выучить что-то новое. Решил написать на Python, а визуализацию взял Gtk, так как сижу в Ubunte то Gtk там смотрится лучше всего ну это и не странно. Python книгу прочитал быстро вот ссылка на нее <a href="http://proklondike.com/contentview.php?content=355">http://proklondike.com/contentview.php?content=355</a> (книга простая ну и мне понравилась) (кстати вот хороший учебник <a href="http://www.diveintopython.net">http://diveintopython.org/</a> разве что на английском но на очень доступном у меня по крайне мере проблем не возникло). Потом начал искать примеры по pygtk ну и поиск привел меня сюда <a href="http://www.pygtk.org/tutorial.html">http://www.pygtk.org/tutorial.html</a> как вы уже догадались это туториал pygtk. Теперь пару слов о нем: туториал просто замечательный я текст не читал, а просто разбирал примеры так как в ним их достаточно ну и прочел его очень быстро. Ну иногда возникали проблемы с pygtk которые так просто с помощью туториала решить не мог но на помощь приходил google и когда приходил он на помощь убивал очень много времени.
+<br /><br />
+В итоге написал но потратил не так мало времени как ожидал (кстати программа идет и под Windows). Но курсовой как не странно проверял преподаватель который не знает программирования и курсовую мою смотрел меньше минуты что тоже не странно.
+<br /><br />
+<span style="font-weight: bold;">О программе</span>: имеет в себе панели работа с клиентами, с проектами, с персоналом и с бухгалтерией. Есть панель входа, 6 пользователей которые могут зайти это: администратор (имеет все привилегии), руководство (только просмотр), менеджер (полный доступ к панели клиентов и панели проекты), менеджер по персоналу (полный доступ к панели персонал), бухгалтер (полный доступ к панели бухгалтерия), архитектор (доступ к редактированию хода проекта).
+<br />
+<strong>Исходники: <a href="https://github.com/ButuzGOL/Stroika">github.com</a></strong>
+
+<!--more-->
+<br /><br />
+<span style="font-weight: bold;">Скриншоты</span>:
+
+<img class="size-full wp-image-179 aligncenter" title="" src="/uploads/posts/blog/stroika/stroika.png" alt="" width="300" height="337" />
+
+<img class="size-full wp-image-180 aligncenter" title="" src="/uploads/posts/blog/stroika/stroika1.png" alt="" width="300" height="257" />
+
+<img class="size-full wp-image-181 aligncenter" title="" src="/uploads/posts/blog/stroika/stroika2.png" alt="" width="450" height="289" />
+
+<img class="size-full wp-image-182 aligncenter" title="" src="/uploads/posts/blog/stroika/stroika3.png" alt="" width="550" height="305" />
+
+<img class="size-full wp-image-183 aligncenter" title="" src="/uploads/posts/blog/stroika/stroika4.png" alt="" width="550" height="313" />
+
+<span style="font-weight: bold;">У</span><span style="font-weight: bold;">становка пакетов для запуска программы</span>:<br />
+<br />
+Для Linux:<br />
+
+1. Python &gt; sudo apt-get install python<br />
+
+2. _mysql &gt; sudo apt-get install python-mysqldb<br />
+
+3. PyGTK &gt; sudo apt-get install python-gtk2<br />
+
+4. MySQL &gt; sudo apt-get install mysql-server-5.0<br />
+<br />
+Для Windows:<br />
+
+1. Python &gt; <a href="http://python.org/ftp/python/2.5.4/python-2.5.4.msi">python-2.5.4.msi</a><br />
+
+2. GTK &gt; <a href="http://downloads.sourceforge.net/gtk-win/gtk2-runtime-2.16.0-2009-03-22-ash.exe?download">gtk2-runtime-2.16.0-2009-03-22-ash.exe</a><br />
+
+3. PyGTK &gt; <a href="http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.12/pygtk-2.12.1-3.win32-py2.5.exe">pygtk-2.12.1-3.win32-py2.5.exe</a><br />
+
+4. _mysql &gt; <a href="http://sourceforge.net/project/downloading.php?group_id=22307&amp;filename=MySQL-python-1.2.2.win32-py2.5.exe&amp;a=13068097">MySQL-python-1.2.2.win32-py2.5.exe</a><br />
+
+5. MySQL &gt; <a href="http://www.mysql.ru/download/">http://www.mysql.ru/download/</a><br />
+<br />
+<span style="font-weight: bold;">Установка</span>:<br />
+
+1. В mysql consol создаем базу данных напр. &gt; create database Stroika;<br />
+
+2. Запускаем файл mconfig.py появляется форма она создает таблицы в базе данных если это сервер, а так она просто делает конфиг файл.

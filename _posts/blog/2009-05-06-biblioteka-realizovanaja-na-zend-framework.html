@@ -1,0 +1,84 @@
+---
+layout: post
+title: Course on Zend Framework
+categories:
+- blog
+- My projects
+tags:
+- ZendFramework
+---
+<img class="size-full wp-image-203 aligncenter noborder" title="" src="/uploads/posts/blog/library/logo.png" alt="" width="118" height="118" />
+
+Пред история: Как то надо было написать один проект 'Библиотека' на php и я решил взять Zend Framework 1.8. Сразу начал искать туториал и нашёл на сайте <a href="http://zendframework.ru/">http://zendframework.ru/</a> там был не большой туториал состоящий из 2 пунктов но очень грамотно составлены. И так начал писать в начали было сложно но интересно но потом разогнался.
+<br /><br />
+<span style="font-weight: bold;">Что я реализовал в проекте</span>:
+<ul>
+	<li>Паттерн MVC - на основе Zend_Controller, Zend_View, Zend_Layout и Zend_Db</li>
+	<li>Управление конфигурационными файлами - Zend_Config</li>
+	<li>Работа с базой данных - Zend_Db, Zend_Db_Select, Zend_Db_Table</li>
+	<li>Отделение представления (вида) с помощью системы шаблонов - Zend_View</li>
+	<li>Двух этапное представление - Zend_Layout</li>
+	<li>Управление маршрутами - Zend_Controller_Router_Rewrite</li>
+	<li>Автоматическая загрузка классов - Zend_Loader</li>
+	<li>Работа с исключениями и обработчик ошибок</li>
+	<li>Работа с формами с помощью Zend_Form, включая работу с элементами формы, валидаторами, фильтрами;</li>
+	<li>Работа с html выводом форм;</li>
+	<li>Календар не с помощью декоратора;</li>
+	<li>Создание валидаторов на примере валидатора пароля, валидатора совпадения двух строк и валидатора проверки отсутствия записи в базе;</li>
+	<li>Перевод ошибок формы с помощью Zend_Translate;</li>
+	<li>Вставка информации в базу данных;</li>
+	<li>Вывод сообщений с использованием помощника FlashMessenger (плагин). Создание плагинов.</li>
+	<li>Авторизация на основе Zend_Auth, Zend_Session;</li>
+	<li>Обновления данных сессии с использованием помощника CheckLogin (плагин);</li>
+	<li>Аjax;</li>
+	<li>Ресайз изображения;</li>
+</ul>
+<strong>Исходники: <a href="https://github.com/ButuzGOL/Library">github.com</a></strong>
+
+<!--more-->
+<br />
+<span style="font-weight: bold;">Скриншоты</span>:
+
+<img class="size-full wp-image-194 aligncenter" title="" src="/uploads/posts/blog/library/library.png" alt="" width="450" height="204" />
+
+<img class="size-full wp-image-195 aligncenter" title="" src="/uploads/posts/blog/library/library1.png" alt="" width="500" height="196" />
+
+<img class="size-full wp-image-196 aligncenter" title="" src="/uploads/posts/blog/library/library2.png" alt="" width="500" height="178" />
+
+<img class="size-full wp-image-197 aligncenter" title="" src="/uploads/posts/blog/library/library3.png" alt="" width="500" height="211" />
+
+<img class="size-full wp-image-198 aligncenter" title="" src="/uploads/posts/blog/library/library4.png" alt="" width="500" height="181" />
+
+<img class="size-full wp-image-199 aligncenter" title="" src="/uploads/posts/blog/library/library5.png" alt="" width="500" height="188" />
+
+<img class="size-full wp-image-200 aligncenter" title="" src="/uploads/posts/blog/library/library6.png" alt="" width="500" height="167" />
+
+<img class="size-full wp-image-201 aligncenter" title="" src="/uploads/posts/blog/library/library7.png" alt="" width="500" height="241" />
+
+<img class="size-full wp-image-202 aligncenter" title="library9" src="/uploads/posts/blog/library/library8.png" alt="" width="500" height="463" />
+
+<span style="font-weight: bold;">Установка</span>:<br />
+
+1. Не забыть что Zend Framework требует php 5.1.4 или выше<br />
+
+2. Создать базу данных в кодировке UTF-8<br />
+
+3. Выполнить sql dump расположенный в корне архива library.sql<br />
+
+4. Установить расширение PDO с поддержкой драйвера mysql (если оно не установлено)<br />
+
+5. Включить mod_rewrite<br />
+
+6. Отредактировать конфигурационный файл application/settings/config.php Необходимо указать название БД, имя пользователя и пароль;<br />
+
+7. Сделать права 777 папке uploads<br />
+
+8. <a href="http://zendframework.com/download/current/">Скачиваем Zend Framework</a> и закидываем в папку library<br /><br />
+
+Если же у вас нет возможности создать отдельный виртуальный хост для сайта вы можете попробовать запустить сайт в папке. Для этого вам придется выполнить следующие действия:<br />
+
+1. Разместите код в нужной папке;<br />
+
+2. Отредактируйте applications/settings/config.php изменив $baseUrl = '/'; на $baseUrl = '/dir_name/public/'; с обязательным слешом в конце. dir_name это название вашей директории;<br />
+
+3. После этих настроек сайт станет доступен по адресу /dir_name/

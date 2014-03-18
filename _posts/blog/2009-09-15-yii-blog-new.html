@@ -1,0 +1,65 @@
+---
+layout: post
+title: Yii blog new
+categories:
+- blog
+- My projects
+tags:
+- jQuery
+- MySQL
+- PHP
+- Yii
+---
+<img class="size-full wp-image-137 aligncenter noborder" title="" src="/uploads/posts/blog/yiiblog/logo.png" alt="" width="128" height="128" />
+
+<span style="font-weight: bold;">Пред история</span>: Как-то раз написал проектик на Zend Framewok'е и мне понравилось. После этого начал учить Django и Codeignoter и понял что что OLE написан не очень хорошо. Решил написать свой не большой блог взяв Yii Framework. За основу взял Yii blog demo который можно скачать с оф. сайта и потом нашел этот же блог но с дополнениями, дописал своего и вот получил Yii blog new. Отмечу что Yii на порядок выше чем Zend и Codeigniter.
+
+<strong>Исходники: <a href="https://github.com/ButuzGOL/Yii-blog-new">github.com</a></strong>
+
+<!--more-->
+<br /><br />
+<span style="font-weight: bold;">Что я реализовал в проекте</span>:
+<ol>
+	<li>Управление статьями</li>
+	<li>Управление комментариями</li>
+	<li>Управление категориями</li>
+	<li>Управление страницами</li>
+	<li>Управление файлами</li>
+	<li>Полная работа с пользователями</li>
+	<li>Загрузка файлов осуществляется с помощью <a href="http://swfupload.org/">swfupload</a></li>
+	<li>Удобный редактор <a href="http://ckeditor.com/">CKEditor 3.0</a></li>
+	<li>Вставка картинок в редактор с помощью <a href="http://jquery.com/demo/thickbox/">ThickBox</a></li>
+	<li>Feed новостей и комментариев</li>
+	<li>Sitemap.xml</li>
+	<li>Поддержка языков пока реализовано Английский и Русский</li>
+	<li>Поддержка тем сайта</li>
+	<li>Просмотр картинок осуществляется с помощью <a href="http://highslide.com/">Highslide</a></li>
+	<li>И многое другое...</li>
+</ol>
+<span style="font-weight: bold;">Скриншоты</span>:
+
+<img class="size-full wp-image-138 aligncenter" title="" src="/uploads/posts/blog/yiiblog/yiiblognew1.jpg" alt="" width="600" height="379" />
+
+<img class="size-full wp-image-139 aligncenter" title="" src="/uploads/posts/blog/yiiblog/yiiblognew2.jpg" alt="" width="600" height="478" />
+
+<img class="size-full wp-image-140 aligncenter" title="" src="/uploads/posts/blog/yiiblog/yiiblognew3.jpg" alt="" width="600" height="414" />
+
+<img class="size-full wp-image-141 aligncenter" title="" src="/uploads/posts/blog/yiiblog/yiiblognew4.jpg" alt="" width="600" height="446" />
+
+<img class="size-full wp-image-146 aligncenter" title="" src="/uploads/posts/blog/yiiblog/yiiblognew5.jpg" alt="" width="600" height="478" />
+
+<img class="size-full wp-image-145 aligncenter" title="" src="/uploads/posts/blog/yiiblog/yiiblognew6.jpg" alt="" width="600" height="368" />
+<h3 style="text-align: center;"><strong>Другой язык</strong></h3>
+<img class="size-full wp-image-142 aligncenter" title="" src="/uploads/posts/blog/yiiblog/yiiblognew7.jpg" alt="" width="600" height="461" /></a>
+<h3 style="text-align: center;"><strong>Другая тема</strong></h3>
+<img class="size-full wp-image-144 aligncenter" title="" src="/uploads/posts/blog/yiiblog/yiiblognew8.jpg" alt="" width="600" height="370" />
+
+<span style="font-weight: bold;">Установка</span>:
+<ol>
+	<li>Создаем базу данных в mysql c кодировкой <strong>utf8_general_ci</strong></li>
+	<li>С файла ptotected/data/schema.mysql.sql берем таблицы</li>
+	<li>У нас уже есть база с таблицами теперь качаем <a href="http://www.yiiframework.com/download/">Yii Framework</a></li>
+	<li>В index.php прописываем путь к Yii Framework</li>
+	<li>В файле ptotected/config/main.php (подключение к базе...) и в файле ptotected/config/params.php (свои данные)</li>
+	<li>Делаем chmod 777 - assets, protected/runtime, uploads/avatar, uploads/file</li>
+</ol>

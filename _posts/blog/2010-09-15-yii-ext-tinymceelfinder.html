@@ -1,0 +1,48 @@
+---
+layout: post
+title: Yii ext tinymce+elfinder
+categories:
+- blog
+- My projects
+tags:
+- jQuery
+- Plugin
+- Yii
+---
+Надо было как-то прикрутить Javascript WYSIWYG Editor совместно с Файловым менеджером. В качестве редактора взял <a href="http://tinymce.moxiecode.com/index.php">Tinymce</a> а именно вот <a href="http://www.yiiframework.com/extension/tinymce/">это</a> расширение обновил там редактор до последней версии 3.3.8 если не ошибаюсь и соответственно прикрутил <a href="http://elrte.org/elfinder">файловый менеджер</a>. Кстати еще включил PHP Spellchecker (рус, анг).
+
+<img class="size-large wp-image-294 aligncenter" title="" src="/uploads/posts/blog/tinymce-elfinder.png" alt="" width="600" height="286" />
+
+<strong>Исходники: <a href="https://github.com/ButuzGOL/tinymce_elfinder">github.com</a></strong><br /><br />
+
+<strong>Ext on Yii web site: <a href="http://www.yiiframework.com/extension/tinymceelfinder">http://www.yiiframework.com/extension/tinymceelfinder</a></strong>
+
+<!--more-->
+<br /><br />
+<strong>Есть то с чем не могу определиться:</strong><br />
+
+Сделал в двух вариантах<br />
+
+1. elfinder в качестве module<br />
+
+Плюсы:
+<ul>
+	<li>можно прописать правила</li>
+	<li>нормально генерируется url</li>
+</ul>
+Минус:
+<ul>
+	<li>то что находиться отдельно от ext</li>
+</ul>
+2. И просто засунул в assets<br />
+
+Минусы:
+<ul>
+	<li>нельзя прописать правила</li>
+	<li>не нормально генерируется url</li>
+</ul>
+Плюс:
+<ul>
+	<li>находиться в папки с Ext</li>
+</ul>
+Было бы не плохо если бы кто подсказал как сделать в папки c Ext и убрать все минусы. И стот ли переносить в папу tinymce/plugins файловый менеджер.

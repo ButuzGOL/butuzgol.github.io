@@ -1,0 +1,76 @@
+---
+layout: post
+title: Inside LiveStreet
+categories:
+- blog
+- CMS
+tags:
+- PHP
+---
+<img class="size-full wp-image-306 aligncenter noborder" title="livestreet" src="/uploads/posts/blog/livestreet.png" alt="" width="300" height="66" />Вот посмотрел cms <a href="http://livestreetcms.ru/">LiveStreet</a> мне понравилась единственное довольно сложно было понять изначально как все происходит но потом когда понял стало все очень просто как всегда.<br /><br />
+
+<strong>Что понравилась:</strong>
+<ul>
+	<li>Файл Engine</li>
+	<li>Работа с кеш</li>
+	<li>Организация модулей, экшенов, связь с базой данных</li>
+	<li>....</li>
+</ul>
+<strong>Что не понравилось:</strong>
+<ul>
+	<li>Вроде как подключенные дополнительные ресурсы не последний (замет по смарти версия 2.6.9) про другое не проверял</li>
+	<li>Довольно сложная структура упростить бы</li>
+	<li>Не используется jQuery</li>
+</ul>
+<strong><strong>Исходники переделки: <a href="https://github.com/ButuzGOL/inside_livestreet">github.com</a></strong></strong>
+
+<!--more-->
+<br /><br />
+<strong>Вот вел ход проекта</strong>
+<ul>
+	<li>Запускаем профайлинг full_time главный профайлинг (index.php)</li>
+	<li>Определяются константы (index.php)</li>
+	<li>Подключаем Engine</li>
+	<li>Подключаем Block !!!!!!</li>
+	<li>Подключаем Hook</li>
+	<li>Подключаем Object.class.php от которого наследуются все классы</li>
+	<li>Подключаем Plugin от которого наследуются все плагины</li>
+	<li>Подключаем Profiler.class.php</li>
+	<li>Подключаем Router</li>
+	<li>Подключаем Mapper работа с sql запросами</li>
+	<li>Подключается файл loader(index.php)</li>
+	<li>Инициализируем класс Config.class.php</li>
+	<li>Вытаскиваем все параметры с файла config.local.php</li>
+	<li>Записываем их в массив aConfig</li>
+	<li>Подключаем конфиги smarty</li>
+	<li>Подключаем конфиги плагинов плагины берем из dat файла !!!!!!</li>
+	<li>Получаем путь /config/modules/</li>
+	<li>Дополняем aConfig параметрами из файлов config.php</li>
+	<li>Получаем путь /config/modules/ и ищем в них config.route.php и инклюдим</li>
+	<li>Получаем путь /engine/include/</li>
+	<li>Подключаем все файлы php</li>
+	<li>Получаем путь /include/</li>
+	<li>Подключаем все файлы php</li>
+	<li>Соединяем все файлы configa config.local.php, config.stable.php</li>
+	<li>Подключаем Router</li>
+	<li>Инит config url и rewrite</li>
+	<li>Подключаем Action</li>
+	<li>Подключаем ActionPlugin</li>
+	<li>Запускает весь процесс</li>
+	<li>Определяем какой action будет 404 или default или custom</li>
+	<li>Парсим урл вытаскиваем асtion event params</li>
+	<li>Инит Engine</li>
+	<li>Подключаем плагины берем из dat файла !!!!!</li>
+	<li>Регистрируем hooks</li>
+	<li>Загружаем modules</li>
+	<li>Делаем Init Cache</li>
+	<li>Запускаем хуки для события завершения инициализации Engine</li>
+	<li>Инициализируем модули array('Hook','Cache','Security','Session','Lang','Message','User')</li>
+	<li>Инициализируем плагины</li>
+	<li>Выводим шаблон</li>
+	<li>Запускаем shutDown всех методов</li>
+	<li>Инит Action</li>
+	<li>Запускаем Action которая связана с parent</li>
+	<li>Пред инит запускаем Init</li>
+	<li>Стопим профайлинг</li>
+</ul>
