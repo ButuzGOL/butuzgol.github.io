@@ -325,7 +325,7 @@ POSTS & CONTENT STYLES
     #posts.portfolio .bottom { background-image: url("../images/portfolio_bottom.png"); width: 980px; height: 40px; }
     
     #post-not-found {}
-    #post-not-found header h1 { 
+    h1.not-found { 
       color: #444444;
       font-family: 'Love Ya Like A Sister', cursive;
       font-size: 40px;
