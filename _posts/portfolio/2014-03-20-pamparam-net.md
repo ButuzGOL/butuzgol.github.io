@@ -5,7 +5,7 @@ categories: portfolio
 website: http://www.pamparam.net/
 images:
   featured: pamparam-new.png
-  other: [pamparam-new1.png]
+  other: []
 types: Webprogramming
 technologies: [Jekyll, Ruby]
 code: https://github.com/ButuzGOL/butuzgol.github.io
