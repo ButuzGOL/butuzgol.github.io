@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+- 2.1.2
+branches:
+  except:
+  - master
+after_success:
+- rake publish:travis
+env:
+  global:
+    secure: XaAtflfsU43HljUjG3VZ9yZIrh3KfSPsZwuPUJM4g/YiHmOvEwPYTm/2QX5u2sPttLZxq089GX6vqZbeAhwlmwaAM+ZctfSPaFCjdR6Nqh6XJpQpXLV/4U0qQbRffM9sNwhsgD5VBCbjyWvcioo2mxdqqcQ6PC8nMnCiqwYdmtM=
