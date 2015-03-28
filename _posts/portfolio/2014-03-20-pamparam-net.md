@@ -2,7 +2,7 @@
 layout: portfolio
 title: Pamparam.net
 categories: portfolio
-website: http://www.pamparam.net/
+website: http://butuzgol.github.io/
 images:
   featured: pamparam-new.png
   other: []
